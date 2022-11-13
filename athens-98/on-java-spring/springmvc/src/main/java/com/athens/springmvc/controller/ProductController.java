@@ -32,8 +32,6 @@ public class ProductController {
     }
 
 
-
-
     // 설정 가격 변경
     @PutMapping("/api/products/{id}")
     public Long updateProduct(@PathVariable Long id, @RequestBody ProductMypriceRequestDto requestDto) throws SQLException {
@@ -43,8 +41,6 @@ public class ProductController {
     }
 
 
-
-
     // 등록된 전체 상품 목록 조회
     @GetMapping("/api/products")
     public List<Product> getProducts() throws SQLException {
@@ -52,4 +48,6 @@ public class ProductController {
 
         return products;
     }
+
+
 }

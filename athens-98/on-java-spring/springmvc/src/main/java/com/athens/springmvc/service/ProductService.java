@@ -22,6 +22,13 @@ public class ProductService {
     }
 
 
+    public List<Product> getProducts() throws SQLException {
+        List<Product> products = productRepository.getProducts();
+
+        return products;
+    }
+
+
     public Product createProduct(ProductRequestDto requestDto) throws SQLException {
         Product product = new Product(requestDto);
 
@@ -42,13 +49,6 @@ public class ProductService {
         productRepository.updateMyprice(id, myprice);
 
         return product;
-    }
-
-
-    public List<Product> getProducts() throws SQLException {
-        List<Product> products = productRepository.getProducts();
-
-        return products;
     }
 
 }
