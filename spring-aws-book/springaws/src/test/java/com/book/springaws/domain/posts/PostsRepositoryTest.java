@@ -49,7 +49,7 @@ public class PostsRepositoryTest {
     public void baseTimeEntityRegisters() {
         // given
         LocalDateTime now = LocalDateTime.of(2022, 11, 20, 0, 0, 0);
-        
+
         postsRepository.save(Posts.builder()
                 .title("title")
                 .content("content")
