@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public interface ProductRepository extends JpaRepository<Product, Long> {
+    List<Product> findAllById(Long userId);
 
 //    private final String dbUrl;
 //    private final String dbId;
