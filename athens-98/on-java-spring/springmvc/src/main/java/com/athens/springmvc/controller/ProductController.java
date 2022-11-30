@@ -3,10 +3,12 @@ package com.athens.springmvc.controller;
 import com.athens.springmvc.dto.ProductMypriceRequestDto;
 import com.athens.springmvc.dto.ProductRequestDto;
 import com.athens.springmvc.entity.Product;
+import com.athens.springmvc.entity.UserRoleEnum;
 import com.athens.springmvc.service.ProductService;
 import com.athens.springmvc.service.UserDetailsImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 import java.sql.*;
@@ -23,7 +25,7 @@ public class ProductController {
         this.productService = productService;
     }
 
-     // 신규 상품 등록
+    // 신규 상품 등록
     @PostMapping("/api/products")
     public Product createProduct(@RequestBody ProductRequestDto requestDto, @AuthenticationPrincipal UserDetailsImpl userDetails) throws SQLException {
         // login 되어있는 회원 테이블의 id
@@ -55,5 +57,10 @@ public class ProductController {
         return productService.getProducts(userId);
     }
 
-
+    // (관리자용) 등록된 모든 상품 목록 조회
+    @Secured(value = UserRoleEnum.Authority.ADMIN)
+    @GetMapping("/api/admin/products")
+    public List<Product> getAllProducts() {
+        return productService.getAllProducts();
+    }
 }

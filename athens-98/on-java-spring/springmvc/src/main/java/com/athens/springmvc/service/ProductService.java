@@ -27,7 +27,7 @@ public class ProductService {
     }
 
 
-    public Product createProduct(ProductRequestDto requestDto, Long userId) throws SQLException {
+    public Product createProduct(ProductRequestDto requestDto, Long userId) {
         Product product = new Product(requestDto, userId);
 
         productRepository.save(product);
@@ -36,7 +36,7 @@ public class ProductService {
     }
 
 
-    public Product updateProduct(Long id, ProductMypriceRequestDto requestDto) throws SQLException {
+    public Product updateProduct(Long id, ProductMypriceRequestDto requestDto) {
         Product product = productRepository
                 .findById(id)
                 .orElseThrow(() -> new NullPointerException("해당 아이디가 존재하지 않습니다."));
@@ -48,4 +48,7 @@ public class ProductService {
         return product;
     }
 
+    public List<Product> getAllProducts() {
+        return productRepository.findAll();
+    }
 }
