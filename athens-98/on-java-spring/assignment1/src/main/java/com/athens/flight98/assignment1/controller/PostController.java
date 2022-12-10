@@ -1,57 +1,47 @@
 package com.athens.flight98.assignment1.controller;
 
+import com.athens.flight98.assignment1.dto.PasswordDto;
 import com.athens.flight98.assignment1.dto.PostRequestDto;
-import com.athens.flight98.assignment1.entity.Post;
-import com.athens.flight98.assignment1.repository.PostRepository;
+import com.athens.flight98.assignment1.dto.ResponseDto;
 import com.athens.flight98.assignment1.service.PostService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RequiredArgsConstructor
-@Controller
+@RestController
 public class PostController {
 
-    private final PostRequestDto postRequestDto;
-    private final PostRepository postRepository;
     private final PostService postService;
 
     @GetMapping("/posts")
-    public List<PostRequestDto> getAllPosts() {
-        List<PostRequestDto> requestDto = postRepository.findAll();
-        return requestDto;
+    public List<ResponseDto> getAllPosts() {
+        return null;
     }
 
     @PostMapping("/posts")
-    public Long writePost(PostRequestDto requestDto) {
+    public ResponseDto<?> createPost(@RequestBody PostRequestDto requestDto) {
         return null;
     }
 
     @GetMapping("/posts/{id}")
-    public Post getPost() {
+    public ResponseDto<?> getPost(@PathVariable Long id) {
         return null;
     }
 
     @PutMapping("/posts/{id}")
-    public Post modifyPost() {
+    public ResponseDto<?> modifiyPost(@PathVariable Long id) {
         return null;
     }
 
     @DeleteMapping("/posts/{id}")
-    public void deletePost() {
-
+    public Long deletePost(@PathVariable Long id) {
+        return id;
     }
 
     @PostMapping("/posts/{id}")
-    public Boolean confirmPassword() {
+    public ResponseDto<?> validateAuthorByPassword(@PathVariable Long id, @RequestBody PasswordDto passwordDto) {
         return null;
     }
-
-    
 }
