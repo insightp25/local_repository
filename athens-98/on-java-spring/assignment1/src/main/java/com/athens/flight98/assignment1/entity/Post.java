@@ -12,7 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Post {
+public class Post extends TimeStamped{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -39,5 +39,10 @@ public class Post {
     }
 
 
-
+    public void update(PostRequestDto requestDto) {
+        this.title = requestDto.getTitle();
+        this.author = requestDto.getAuthor();
+        this.content = requestDto.getContent();
+        this.password = requestDto.getPassword();
+    }
 }

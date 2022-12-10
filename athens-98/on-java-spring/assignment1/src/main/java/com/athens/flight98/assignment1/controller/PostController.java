@@ -16,32 +16,32 @@ public class PostController {
     private final PostService postService;
 
     @GetMapping("/posts")
-    public List<ResponseDto> getAllPosts() {
-        return null;
+    public ResponseDto<?> getAllPosts() {
+        return postService.getAllPosts();
     }
 
     @PostMapping("/posts")
     public ResponseDto<?> createPost(@RequestBody PostRequestDto requestDto) {
-        return null;
+        return postService.createPost(requestDto);
     }
 
     @GetMapping("/posts/{id}")
     public ResponseDto<?> getPost(@PathVariable Long id) {
-        return null;
+        return postService.getPost(id);
     }
 
     @PutMapping("/posts/{id}")
-    public ResponseDto<?> modifiyPost(@PathVariable Long id) {
-        return null;
+    public ResponseDto<?> modifiyPost(@PathVariable Long id, @RequestBody PostRequestDto requestDto) {
+        return postService.updatePost(id, requestDto);
     }
 
     @DeleteMapping("/posts/{id}")
-    public Long deletePost(@PathVariable Long id) {
-        return id;
+    public ResponseDto<?> deletePost(@PathVariable Long id) {
+        return postService.deletePost(id);
     }
 
     @PostMapping("/posts/{id}")
     public ResponseDto<?> validateAuthorByPassword(@PathVariable Long id, @RequestBody PasswordDto passwordDto) {
-        return null;
+        return postService.validateAuthorByPassword(id, passwordDto);
     }
 }
