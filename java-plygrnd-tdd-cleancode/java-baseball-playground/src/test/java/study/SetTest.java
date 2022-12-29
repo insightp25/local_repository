@@ -37,7 +37,7 @@ public class SetTest {
         assertThat(numbers.contains(input)).isTrue();
     }
 
-    
+
     @ParameterizedTest
     @CsvSource({"1, true", "2, true", "3, true", "9, true", "4, false", "5, false"})
     void contains(int input, String expected) {
