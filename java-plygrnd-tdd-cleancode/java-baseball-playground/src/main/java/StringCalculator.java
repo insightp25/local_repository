@@ -32,9 +32,9 @@ public class StringCalculator {
         int answer = intArr.get(0);
 
 
-        for (int i : intArr) {
-            System.out.println(i);
-        }
+//        for (int i : intArr) {
+//            System.out.println(i);
+//        }
 
 
         for (int i = 0; i < intArr.size() - 1; i++) {
@@ -51,14 +51,14 @@ public class StringCalculator {
 
         }
 
+        System.out.print(answer);
         return answer;
     }
 
     public static void main(String[] args) {
         StringCalculator strCalc = new StringCalculator();
 
-        int num = strCalc.getValue();
-        System.out.println("final answer: " + num);
+        strCalc.getValue();
     }
 
 }

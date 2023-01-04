@@ -1,19 +1,31 @@
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import java.io.*;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class StringCalculatorTest {
-    StringCalculator strCalc;
+    static StringCalculator strCalc;
+    static String errMsg = "계산식을 입력해주세요.";
 
     @BeforeAll
-    void initAll() {
+    static void initAll() {
         strCalc = new StringCalculator();
     }
     @Test
     void StrCalcTest() {
-        int num = strCalc.getValue();
-        assertThat(5).isEqualTo(num);
+        String input = "1 + 2 + 3";
+
+        OutputStream out = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(out));
+
+        InputStream in = new ByteArrayInputStream(input.getBytes());
+        System.setIn(in);
+
+        strCalc.getValue();
+
+        assertThat("6").isEqualTo(out.toString());
 
     }
 }
