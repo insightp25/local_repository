@@ -6,9 +6,9 @@ public class VarArgsEx {
 
         System.out.println(concatenate("", "aaa", "bbb", "ccc"));
         System.out.println(concatenate("-", strArr));
-        System.out.println(concatenate(",", new String[]{"www", "xxx", "yyy"}));
-        System.out.println("[" + concatenate(",", new String[0] + "]"));
-        System.out.println("[" + concatenate("," + "]"));
+        System.out.println(concatenate(",", new String[]{"x", "y", "z"}));
+        System.out.println("[" + concatenate(",", new String[0]) + "]");
+        System.out.println("[" + concatenate(",") + "]");
     }
 
     static String concatenate(String delim, String... args) {
