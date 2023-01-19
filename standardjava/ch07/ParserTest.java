@@ -45,5 +45,6 @@ public class ParserTest {
         Vector<?> wow4;
         AbstractList<?> wow5;
         SortedMap<?, ?> wow7;
+        ArrayList<?> wow8;
     }
 }
