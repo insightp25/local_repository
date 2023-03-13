@@ -39,11 +39,13 @@ public class HelloTraceV1 {
             log.info("[{}] {}{} time={}ms",
                     traceId.getId(),
                     addSpace(COMPLETE_PREFIX, traceId.getLevel()),
+                    status.getMessage(),
                     resultTimeMs);
         } else {
             log.info("[{}] {}{} time={}ms ex={}",
                     traceId.getId(),
                     addSpace(EX_PREFIX, traceId.getLevel()),
+                    status.getMessage(),
                     resultTimeMs,
                     e.toString());
         }
