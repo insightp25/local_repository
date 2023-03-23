@@ -5,23 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9346440-f676-463a-bc12-d131785bdaab" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/haro/advanced/AdvancedApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/haro/advanced/app/v0/OrderControllerV0.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/haro/advanced/app/v0/OrderRepositoryV0.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/haro/advanced/app/v0/OrderServiceV0.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/haro/advanced/trace/TraceId.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/haro/advanced/trace/TraceStatus.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/haro/advanced/trace/hellotrace/HelloTraceV1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/haro/advanced/AdvancedApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/haro/advanced/trace/hellotrace/HelloTraceV1Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/haro/advanced/AdvancedApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/haro/advanced/AdvancedApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +176,7 @@
       <updated>1678689706452</updated>
       <workItem from="1678689708520" duration="594000" />
       <workItem from="1678690345702" duration="13475000" />
-      <workItem from="1679556496249" duration="9526000" />
+      <workItem from="1679556496249" duration="8896000" />
     </task>
     <servers />
   </component>
