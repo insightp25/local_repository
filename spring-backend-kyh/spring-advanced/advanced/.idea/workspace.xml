@@ -5,7 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9346440-f676-463a-bc12-d131785bdaab" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/haro/advanced/AdvancedApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/haro/advanced/AdvancedApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../community-sns/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../community-sns/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../community-sns/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../community-sns/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../community-sns/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../community-sns/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../community-sns/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../community-sns/src/main/java/mock/communitysns/CommunitySnsApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../community-sns/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../community-sns/src/test/java/mock/communitysns/CommunitySnsApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,9 +28,25 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -47,7 +74,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/leanair/Desktop/local_repository/spring-backend-kyh/spring-advanced/advanced/src/main/java/haro/advanced/app/v2",
+    "last_opened_file_path": "/Users/dongwooksongpro/Desktop/local_repository/spring-backend-kyh/spring-advanced/advanced/src/main/java/haro/advanced/app/v4",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -55,99 +82,142 @@
     "project.structure.last.edited": "SDKs",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
+    "settings.editor.selected.configurable": "preferences.sourceCode.Java",
     "spring.configuration.checksum": "d45c5a0af6a6a95c27f550fbebe745e2",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/haro/advanced/app/v4" />
       <recent name="$PROJECT_DIR$/src/main/java/haro/advanced/app/v2" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/haro/advanced/app/v3" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="haro.advanced.trace.template.code" />
+      <recent name="haro.advanced.trace.logtrace" />
+      <recent name="haro.advanced.trace.threadlocal" />
       <recent name="haro.advanced.trace.hellotrace" />
       <recent name="haro.advanced.app.v1" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.AdvancedApplication">
-    <configuration name="HelloTraceV1Test.begin_end" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="advanced.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="haro.advanced.trace.hellotrace.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="haro.advanced.trace.hellotrace" />
-      <option name="MAIN_CLASS_NAME" value="haro.advanced.trace.hellotrace.HelloTraceV1Test" />
-      <option name="METHOD_NAME" value="begin_end" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="TemplateMethodTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;haro.advanced.trace.template.TemplateMethodTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
     </configuration>
-    <configuration name="HelloTraceV1Test.begin_exception" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="advanced.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="haro.advanced.trace.hellotrace.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="haro.advanced.trace.hellotrace" />
-      <option name="MAIN_CLASS_NAME" value="haro.advanced.trace.hellotrace.HelloTraceV1Test" />
-      <option name="METHOD_NAME" value="begin_exception" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="TemplateMethodTest.templateMethodV2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;haro.advanced.trace.template.TemplateMethodTest.templateMethodV2&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
     </configuration>
-    <configuration name="HelloTraceV2Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="advanced.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="haro.advanced.trace.hellotrace.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="haro.advanced.trace.hellotrace" />
-      <option name="MAIN_CLASS_NAME" value="haro.advanced.trace.hellotrace.HelloTraceV2Test" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="ThreadLocalLogTraceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;haro.advanced.trace.logtrace.ThreadLocalLogTraceTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
     </configuration>
-    <configuration name="HelloTraceV2Test.begin_end" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="advanced.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="haro.advanced.trace.hellotrace.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="haro.advanced.trace.hellotrace" />
-      <option name="MAIN_CLASS_NAME" value="haro.advanced.trace.hellotrace.HelloTraceV2Test" />
-      <option name="METHOD_NAME" value="begin_end" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="ThreadLocalLogTraceTest.begin_end_level2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;haro.advanced.trace.logtrace.ThreadLocalLogTraceTest.begin_end_level2&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
     </configuration>
-    <configuration name="HelloTraceV2Test.begin_exception" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="advanced.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="haro.advanced.trace.hellotrace.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="haro.advanced.trace.hellotrace" />
-      <option name="MAIN_CLASS_NAME" value="haro.advanced.trace.hellotrace.HelloTraceV2Test" />
-      <option name="METHOD_NAME" value="begin_exception" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="ThreadLocalServiceTest.field" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;haro.advanced.trace.threadlocal.ThreadLocalServiceTest.field&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
     </configuration>
     <configuration name="AdvancedApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="advanced.main" />
@@ -158,11 +228,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.HelloTraceV2Test.begin_exception" />
-        <item itemvalue="JUnit.HelloTraceV2Test.begin_end" />
-        <item itemvalue="JUnit.HelloTraceV2Test" />
-        <item itemvalue="JUnit.HelloTraceV1Test.begin_exception" />
-        <item itemvalue="JUnit.HelloTraceV1Test.begin_end" />
+        <item itemvalue="Gradle.TemplateMethodTest.templateMethodV2" />
+        <item itemvalue="Gradle.TemplateMethodTest" />
+        <item itemvalue="Gradle.ThreadLocalLogTraceTest" />
+        <item itemvalue="Gradle.ThreadLocalLogTraceTest.begin_end_level2" />
+        <item itemvalue="Gradle.ThreadLocalServiceTest.field" />
       </list>
     </recent_temporary>
   </component>
@@ -177,6 +247,8 @@
       <workItem from="1678689708520" duration="594000" />
       <workItem from="1678690345702" duration="13475000" />
       <workItem from="1679556496249" duration="8896000" />
+      <workItem from="1680829267876" duration="169000" />
+      <workItem from="1680829455997" duration="24016000" />
     </task>
     <servers />
   </component>
