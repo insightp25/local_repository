@@ -53,7 +53,6 @@ public class TemplateMethodTest {
                 log.info("비즈니스 로직1 실행");
             }
         };
-        log.info("클래스 이름={}", template1.getClass());
         template1.execute();
 
         AbstractTemplate template2 = new AbstractTemplate() {
@@ -62,7 +61,6 @@ public class TemplateMethodTest {
                 log.info("비즈니스 로직2 실행");
             }
         };
-        log.info("클래스 이름={}", template2.getClass());
         template2.execute();
     }
 
