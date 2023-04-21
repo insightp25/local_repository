@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c9346440-f676-463a-bc12-d131785bdaab" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proxy/src/main/java/hello/proxy/ProxyApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proxy/src/main/java/hello/proxy/ProxyApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proxy/src/main/java/hello/proxy/app/v2/OrderControllerV2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proxy/src/main/java/hello/proxy/app/v2/OrderControllerV2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proxy/src/main/java/hello/proxy/app/v2/OrderServiceV3.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proxy/src/main/java/hello/proxy/app/v2/OrderServiceV2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proxy/src/main/java/hello/proxy/app/v3/OrderControllerV3.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proxy/src/main/java/hello/proxy/app/v3/OrderControllerV3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../proxy/src/main/java/hello/proxy/config/AppV2Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proxy/src/main/java/hello/proxy/config/AppV2Config.java" afterDir="false" />
-    </list>
+    <list default="true" id="c9346440-f676-463a-bc12-d131785bdaab" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
