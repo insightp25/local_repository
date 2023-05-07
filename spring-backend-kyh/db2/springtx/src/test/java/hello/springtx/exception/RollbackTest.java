@@ -34,6 +34,7 @@ public class RollbackTest {
 
     @TestConfiguration
     static class RollbackTestConfig {
+
         @Bean
         RollbackService rollbackService() {
             return new RollbackService();
@@ -43,21 +44,21 @@ public class RollbackTest {
     @Slf4j
     static class RollbackService {
 
-        //런타임 예외 발생: 롤백
+        // runtime exception occurs: rollback
         @Transactional
         public void runtimeException() {
             log.info("call runtimeException");
             throw new RuntimeException();
         }
 
-        //체크 예외 발생: 커밋
+        // checked exception occurs: commit
         @Transactional
         public void checkedException() throws MyException {
             log.info("call checkedException");
             throw new MyException();
         }
 
-        //체크 예외 rollbackFor 지정: 롤백
+        // checked exception rollbackFor 지정: rollback
         @Transactional(rollbackFor = MyException.class)
         public void rollbackFor() throws MyException {
             log.info("call rollbackFor");
@@ -67,5 +68,4 @@ public class RollbackTest {
 
     static class MyException extends Exception {
     }
-
 }

@@ -44,7 +44,7 @@ public class TxLevelTest {
         }
 
         private void printTxInfo() {
-            boolean txActive = TransactionSynchronizationManager.isActualTransactionActive();
+            boolean txActive = TransactionSynchronizationManager.isSynchronizationActive();
             log.info("tx active={}", txActive);
             boolean readOnly = TransactionSynchronizationManager.isCurrentTransactionReadOnly();
             log.info("tx readOnly={}", readOnly);

@@ -14,8 +14,7 @@ import org.springframework.transaction.support.TransactionSynchronizationManager
 @SpringBootTest
 public class InternalCallV2Test {
 
-    @Autowired
-    CallService callService;
+    @Autowired CallService callService;
 
     @Test
     void printProxy() {
@@ -39,7 +38,6 @@ public class InternalCallV2Test {
         InternalService internalService() {
             return new InternalService();
         }
-
     }
 
     @Slf4j
@@ -55,7 +53,7 @@ public class InternalCallV2Test {
         }
 
         private void printTxInfo() {
-            boolean txActive = TransactionSynchronizationManager.isActualTransactionActive();
+            boolean txActive = TransactionSynchronizationManager.isSynchronizationActive();
             log.info("tx active={}", txActive);
         }
     }
@@ -69,7 +67,7 @@ public class InternalCallV2Test {
         }
 
         private void printTxInfo() {
-            boolean txActive = TransactionSynchronizationManager.isActualTransactionActive();
+            boolean txActive = TransactionSynchronizationManager.isSynchronizationActive();
             log.info("tx active={}", txActive);
         }
     }

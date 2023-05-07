@@ -1,7 +1,8 @@
 package hello.springtx.apply;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 import lombok.extern.slf4j.Slf4j;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.aop.support.AopUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,13 +12,12 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.support.TransactionSynchronizationManager;
 
-import static org.assertj.core.api.Assertions.*;
-
 @Slf4j
 @SpringBootTest
 public class TxBasicTest {
 
-    @Autowired BasicService basicService;
+    @Autowired
+    BasicService basicService;
 
     @Test
     void proxyCheck() {
@@ -33,6 +33,7 @@ public class TxBasicTest {
 
     @TestConfiguration
     static class TxApplyBasicConfig {
+
         @Bean
         BasicService basicService() {
             return new BasicService();

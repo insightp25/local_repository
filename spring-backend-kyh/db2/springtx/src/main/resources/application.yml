@@ -1,0 +1,19 @@
+logging:
+  level:
+    org:
+      springframework:
+        transaction:
+          interceptor: TRACE
+        # bellow 3: for @Transactional tracking
+        jdbc:
+          datasource:
+            DataSourceTransactionManager: DEBUG
+        # JPA log
+        orm:
+          jpa:
+            JpaTransactionManager: DEBUG
+      hibernate:
+        # JPA SQL
+        SQL: DEBUG
+        resource:
+          transaction: DEBUG

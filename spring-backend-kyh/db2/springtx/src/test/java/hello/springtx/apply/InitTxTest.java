@@ -1,5 +1,6 @@
 package hello.springtx.apply;
 
+import javax.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,41 +12,41 @@ import org.springframework.context.event.EventListener;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.support.TransactionSynchronizationManager;
 
-import javax.annotation.PostConstruct;
-
 @SpringBootTest
 public class InitTxTest {
 
-    @Autowired Hello hello;
+    @Autowired Haro haro;
 
     @Test
     void go() {
-        //초기화 코드는 스프링이 초기화 시점에 호출한다.
+        // 초기화 코드는 스프링이 초기화 시점에 호출한다.
+        // haro.initV1();
     }
 
     @TestConfiguration
     static class InitTxTestConfig {
+
         @Bean
-        Hello hello() {
-            return new Hello();
+        Haro haro() {
+            return new Haro();
         }
     }
 
     @Slf4j
-    static class Hello {
+    static class Haro {
 
-        @PostConstruct
         @Transactional
+        @PostConstruct
         public void initV1() {
-            boolean isActive = TransactionSynchronizationManager.isActualTransactionActive();
-            log.info("Hello init @PostConstruct tx active={}", isActive);
+            boolean isActive = TransactionSynchronizationManager.isSynchronizationActive();
+            log.info("Haro init @PostConstruct tx active={}", isActive);
         }
 
         @EventListener(ApplicationReadyEvent.class)
         @Transactional
         public void initV2() {
-            boolean isActive = TransactionSynchronizationManager.isActualTransactionActive();
-            log.info("Hello init ApplicationReadyEvent tx active={}", isActive);
+            boolean isActive = TransactionSynchronizationManager.isSynchronizationActive();
+            log.info("Haro init ApplicationReadyEvent tx active={}", isActive);
         }
     }
 }
