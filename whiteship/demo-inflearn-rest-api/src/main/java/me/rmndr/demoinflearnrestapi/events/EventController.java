@@ -3,7 +3,9 @@ package me.rmndr.demoinflearnrestapi.events;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 
 import java.net.URI;
+import javax.validation.Valid;
 import org.modelmapper.ModelMapper;
+import org.modelmapper.internal.Errors;
 import org.springframework.hateoas.MediaTypes;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -27,7 +29,10 @@ public class EventController {
 //    EventRepository eventRepository;
 
     @PostMapping
-    public ResponseEntity createEvent(@RequestBody EventDto eventDto) {
+    public ResponseEntity createEvent(@RequestBody @Valid EventDto eventDto, Errors errors) {
+        if (errors.hasErrors()) {
+            return ResponseEntity.badRequest().build();
+        }
 //        Event event = Event.builder()
 //            .name(eventDto.getName())
 //            .description(eventDto.getDescription())
