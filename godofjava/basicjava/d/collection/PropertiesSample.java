@@ -9,22 +9,23 @@ import java.io.FileOutputStream;
 
 public class PropertiesSample {
     public static void main (String[] args) {
-        String a = "wow";
-        String b = "wow";
-        System.out.println(a);
-        System.out.println(b);
-        System.out.println(a == b);
-        System.out.println(a.equals(b));
-        String c = new String("wow");
-        String d = new String("wow");
-        System.out.println(c);
-        System.out.println(d);
-        System.out.println(c == d);
-        System.out.println(c.equals(d));
-        int e = 1;
-        int f = 1;
-        System.out.println(e == f);
-        // PropertiesSample sample = new PropertiesSample();
+        // String a = "wow";
+        // String b = "wow";
+        // System.out.println(a);
+        // System.out.println(b);
+        // System.out.println(a == b);
+        // System.out.println(a.equals(b));
+        // String c = new String("wow");
+        // String d = new String("wow");
+        // System.out.println(c);
+        // System.out.println(d);
+        // System.out.println(c == d);
+        // System.out.println(c.equals(d));
+        // int e = 1;
+        // int f = 1;
+        // System.out.println(e == f);
+        PropertiesSample sample = new PropertiesSample();
+        sample.checkProperties();
         // sample.saveAndLoadPropertiesXML();
     }
 
@@ -32,7 +33,7 @@ public class PropertiesSample {
         Properties prop = System.getProperties();
         Set<Object> keySet = prop.keySet();
         for (Object tempObject : keySet) {
-            System.out.println(tempObject + "=" + prop.get(tempObject));
+            System.out.println(tempObject + " = " + prop.get(tempObject));
         }
     }
 
