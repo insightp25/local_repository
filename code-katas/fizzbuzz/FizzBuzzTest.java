@@ -34,4 +34,15 @@ public class FizzBuzzTest {
         assertEquals("FizzBuzz", fizzBuzz.evaluate(15));
         assertEquals("FizzBuzz", fizzBuzz.evaluate(30));
     }
+
+    @Test
+    public void testFizzBuzzSequence() {
+        String[] expected = {
+            "1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz", "16", "17", "Fizz", "19", "Buzz"
+        };
+
+        String[] results = FizzBuzz.generate(1, 20);
+
+        assertEquals(expected, results);
+    }
 }
