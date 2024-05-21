@@ -447,7 +447,7 @@ public class EntityTest {
             System.out.println("em.contains(memo) = " + em.contains(memo));
 
             System.out.println("준영속 memo 값 수정");
-            memo.setContents("merge() 수정222");
+            memo.setContents("merge() 수정333");
 
             System.out.println("\n merge() 호출");
             Memo mergedMemo = em.merge(memo);

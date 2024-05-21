@@ -1,43 +1,33 @@
 package com.istack.recapjpa;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
 @Table(name = "memo")
 public class Memo {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "username", nullable = false, unique = true)
+    @Column(name = "username", nullable = false)
     private String username;
 
     @Column(name = "contents", nullable = false, length = 500)
     private String contents;
 
-    public Long getId() {
-        return id;
+    public Memo(MemoRequestDto requestDto) {
+        this.username = requestDto.getUserName();
+        this.contents = requestDto.getContents();
     }
 
-    public String getUsername() {
-        return username;
-    }
-
-    public String getContents() {
-        return contents;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public void setContents(String contents) {
-        this.contents = contents;
+    public void update(MemoRequestDto requestDto) {
+        this.username = requestDto.getUserName();
+        this.contents = requestDto.getContents();
     }
 }
