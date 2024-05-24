@@ -10,5 +10,4 @@ public class RecapsAuthApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(RecapsAuthApplication.class, args);
 	}
-
 }
