@@ -67,7 +67,7 @@ public class UserServiceTest {
     @Test
     public void getById_는_ACTIVE_상태인_유저를_찾아올_수_있다() {
         // given
-        long id = 1L;
+        long id = 99L;
 
         // when
         UserEntity result = userService.getById(id);
@@ -91,9 +91,7 @@ public class UserServiceTest {
     }
 
     //error 발생:
-    //2024-06-12T00:33:10.266+09:00  WARN 92339 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 23505, SQLState: 23505
-    //2024-06-12T00:33:10.266+09:00 ERROR 92339 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.USERS(ID) ( /* key:1 */ CAST(1 AS BIGINT), 'Seoul', 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaa', 'jos@gmail.com', CAST(0 AS BIGINT), 'jos', 'ACTIVE')"; SQL statement:
-    //insert into users (id, address, certification_code, email, last_login_at, nickname, status) values (default, ?, ?, ?, ?, ?, ?) [23505-214]
+    //파일 /sql/post-service-test-data.sql 내용에서 user의 id를 1로 설정시 발생. 99 등 다른 값으로 하면 OK. // FIXME
     //
     //org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint ["PRIMARY KEY ON PUBLIC.USERS(ID) ( /* key:1 */ CAST(1 AS BIGINT), 'Seoul', 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaa', 'jos@gmail.com', CAST(0 AS BIGINT), 'jos', 'ACTIVE')"; SQL statement:
     //insert into users (id, address, certification_code, email, last_login_at, nickname, status) values (default, ?, ?, ?, ?, ?, ?) [23505-214]]
@@ -121,29 +119,29 @@ public class UserServiceTest {
     }
 
     @Test
-    public void update_를_이용하여_유저를_생성할_수_있다() {
+    public void update_를_이용하여_유저정보를_수정할_수_있다() {
         // given
         UserUpdateDto userUpdateDto = UserUpdateDto.builder()
                 .address("Jeju")
-                .nickname("jos9")
+                .nickname("davy")
                 .build();
 
-        userService.update(1, userUpdateDto);
+        userService.update(99, userUpdateDto);
 
         // then
-        UserEntity userEntity = userService.getById(1);
+        UserEntity userEntity = userService.getById(99);
         assertThat(userEntity.getId()).isNotNull();
-        assertThat(userEntity.getNickname()).isEqualTo("jos9");
+        assertThat(userEntity.getNickname()).isEqualTo("davy");
         assertThat(userEntity.getAddress()).isEqualTo("Jeju");
     }
 
     @Test
     public void user_를_로그인_시키면_마지막_로그인_시간이_변경된다() {
         // given & when
-        userService.login(1);
+        userService.login(99);
 
         // then
-        UserEntity userEntity = userService.getById(1);
+        UserEntity userEntity = userService.getById(99);
         assertThat(userEntity.getLastLoginAt()).isGreaterThan(0L);
         //assertThat(userEntity.getLastLoginAt()).isGreaterThan("TT"); // FIXME
     }
