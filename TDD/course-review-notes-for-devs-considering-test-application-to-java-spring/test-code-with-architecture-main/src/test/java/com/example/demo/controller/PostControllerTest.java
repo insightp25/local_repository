@@ -1,6 +1,6 @@
 package com.example.demo.controller;
 
-import com.example.demo.model.dto.PostUpdateDto;
+import com.example.demo.post.domain.PostUpdate;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,13 +51,13 @@ public class PostControllerTest {
 
     @Test
     void 사용자는_게시물_정보를_수정할_수_있다() throws Exception {
-        PostUpdateDto postUpdateDto = PostUpdateDto.builder()
+        PostUpdate postUpdate = PostUpdate.builder()
                 .content("test modification1")
                 .build();
 
         mockMvc.perform(put("/api/posts/99")
                         .contentType(MediaType.APPLICATION_JSON)
-                        .content(objectMapper.writeValueAsString(postUpdateDto)))
+                        .content(objectMapper.writeValueAsString(postUpdate)))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.id").value(99L))
                 .andExpect(jsonPath("$.content").value("test modification1"))
