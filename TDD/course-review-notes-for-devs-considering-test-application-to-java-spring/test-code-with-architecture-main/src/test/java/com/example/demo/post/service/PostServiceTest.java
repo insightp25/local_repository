@@ -1,9 +1,8 @@
 package com.example.demo.post.service;
 
+import com.example.demo.post.domain.Post;
 import com.example.demo.post.domain.PostCreate;
 import com.example.demo.post.domain.PostUpdate;
-import com.example.demo.post.infrastructure.PostEntity;
-import com.example.demo.post.service.PostService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -26,7 +25,7 @@ public class PostServiceTest {
     @Test
     void getById_는_작성된_글을_id로_찾아올_수_있다() {
         // given & when
-        PostEntity result = postService.getById(99L);
+        Post result = postService.getById(99L);
 
         // then
         assertThat(result.getContent()).isEqualTo("written content1");
@@ -47,7 +46,7 @@ public class PostServiceTest {
                 .build();
 
         // when
-        PostEntity result = postService.create(postCreate); // FIXME
+        Post result = postService.create(postCreate); // FIXME
 
         // then
         assertThat(result.getId()).isNotNull();
@@ -65,7 +64,7 @@ public class PostServiceTest {
         postService.update(99L, postUpdate);
 
         // then
-        PostEntity result = postService.getById(99L);
+        Post result = postService.getById(99L);
         assertThat(result.getId()).isNotNull();
         assertThat(result.getContent()).isEqualTo("modified content2");
         assertThat(result.getModifiedAt()).isGreaterThan(0);

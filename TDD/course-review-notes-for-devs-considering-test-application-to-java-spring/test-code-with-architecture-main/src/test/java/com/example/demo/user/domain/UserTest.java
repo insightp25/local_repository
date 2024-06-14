@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 public class UserTest {
 
     @Test
-    void User는_UserCreate_객체로_생성할_수_있다() {
+    void UserCreate_객체로_계정을_생성할_수_있다() {
         // given
 
 
@@ -14,4 +14,43 @@ public class UserTest {
         // then
     }
 
+    @Test
+    void UserUpdate_객체로_계정_데이터를_업데이트할_수_있다() {
+        // given
+
+
+        // when
+
+        // then
+    }
+
+    @Test
+    void 로그인을_할_수_있고_로그인시_계정_마지막_로그인_시간이_변경된다() {
+        // given
+
+
+        // when
+
+        // then
+    }
+
+    @Test
+    void 유효한_인증_코드로_계정을_활성화_할_수_있다() {
+        // given
+
+
+        // when
+
+        // then
+    }
+
+    @Test
+    void 잘못된_인증_코드로_계정을_활성화_하려하면_에러를_던진다() {
+        // given
+
+
+        // when
+
+        // then
+    }
 }
