@@ -123,7 +123,7 @@ public class UserServiceTest {
             .build();
 
         // when
-        User result = userService.create(userCreate); // FIXME
+        User result = userService.create(userCreate);
 
         // then
         assertThat(result.getId()).isNotNull();
