@@ -9,10 +9,7 @@ import com.example.demo.post.service.PostServiceImpl;
 import com.example.demo.post.service.port.PostRepository;
 import com.example.demo.user.controller.UserController;
 import com.example.demo.user.controller.UserCreateController;
-import com.example.demo.user.controller.port.AuthenticationService;
-import com.example.demo.user.controller.port.UserCreateService;
-import com.example.demo.user.controller.port.UserReadService;
-import com.example.demo.user.controller.port.UserUpdateService;
+import com.example.demo.user.controller.port.UserService;
 import com.example.demo.user.service.CertificationService;
 import com.example.demo.user.service.UserServiceImpl;
 import com.example.demo.user.service.port.MailSender;
@@ -27,10 +24,7 @@ public class TestContainer {
 
     public final CertificationService certificationService;
 
-    public final UserReadService userReadService;
-    public final UserCreateService userCreateService;
-    public final UserUpdateService userUpdateService;
-    public final AuthenticationService authenticationService;
+    public final UserService userService;
 
     public final UserController userController;
     public final UserCreateController userCreateController;
@@ -60,20 +54,15 @@ public class TestContainer {
             .certificationService(new CertificationService(this.mailSender))
             .userRepository(this.userRepository)
             .build();
-        this.userReadService = userService;
-        this.userCreateService = userService;
-        this.userUpdateService = userService;
-        this.authenticationService = userService;
+        this.userService = userService;
 
         //controller layer
         this.userController = UserController.builder()
-            .userReadService(this.userReadService)
-            .userUpdateService(this.userUpdateService)
-            .authenticationService(this.authenticationService)
+            .userService(this.userService)
             .build();
 
         this.userCreateController = UserCreateController.builder()
-            .userCreateService(this.userCreateService)
+            .userService(this.userService)
             .build();
 
         //Post domain
