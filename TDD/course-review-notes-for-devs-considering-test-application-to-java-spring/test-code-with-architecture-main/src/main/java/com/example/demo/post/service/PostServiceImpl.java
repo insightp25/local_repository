@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 @Service
 @Builder
 @RequiredArgsConstructor
-public class PostService {
+public class PostServiceImpl implements com.example.demo.post.controller.port.PostService {
 
     private final PostRepository postRepository;
     private final UserRepository userRepository;
