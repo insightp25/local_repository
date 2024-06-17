@@ -7,6 +7,7 @@ import com.example.demo.user.controller.port.AuthenticationService;
 import com.example.demo.user.controller.port.CertificationService;
 import com.example.demo.user.controller.port.UserCreateService;
 import com.example.demo.user.controller.port.UserReadService;
+import com.example.demo.user.controller.port.UserService;
 import com.example.demo.user.controller.port.UserUpdateService;
 import com.example.demo.user.domain.User;
 import com.example.demo.user.domain.UserCreate;
@@ -24,7 +25,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Builder
 @RequiredArgsConstructor
 public class UserServiceImpl implements UserReadService, UserUpdateService, UserCreateService,
-    AuthenticationService {
+    AuthenticationService, UserService {
 
     private final UserRepository userRepository;
     private final CertificationService certificationService;
